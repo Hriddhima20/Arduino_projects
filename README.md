@@ -12,18 +12,18 @@ This repository contains simple Arduino projects designed to help beginners lear
 Below are the projects available in this repository:
 
 1. Traffic Light Controller:
-> Description: Simulate a traffic light using LEDs and timers.
-> File:
-> Components: Arduino Uno, LEDs(3), resistors(3), wires.
+a. Description: Simulate a traffic light using LEDs and timers.
+b. File:
+c. Components: Arduino Uno, LEDs(3), resistors(3), wires.
 
 2. Temperature Sensor:
-> Description: Measure temperature using a temperature sensor module and display the value on an LCD(16*2).
-> File:
-> Components: Arduino Uno, LCD(16*2), potentiometer, temperature sensor, resistor, wires.
+a. Description: Measure temperature using a temperature sensor module and display the value on an LCD(16*2).
+b. File:
+c Components: Arduino Uno, LCD(16X2), potentiometer, temperature sensor, resistor, wires.
 
 3. Buzzer Alarm:
-> Description:  Creating a simple buzzer alarm using a buzzer and a push button.
-> File:
-> Components: Arduino Uno, push button, buzzer, resistors, wires.
+a. Description:  Creating a simple buzzer alarm using a buzzer and a push button.
+b. File:
+c. Components: Arduino Uno, push button, buzzer, resistors, wires.
 
 (More projects will be added as I continue learning!)
