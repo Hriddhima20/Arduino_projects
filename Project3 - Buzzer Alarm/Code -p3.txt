@@ -1,0 +1,15 @@
+void setup()
+{
+  pinMode(8,INPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop()
+{
+  int push = digitalRead(8);
+  if(push == HIGH){
+  digitalWrite(11,HIGH);}
+  else{
+  digitalWrite(11,LOW);
+  }
+}
