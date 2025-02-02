@@ -10,6 +10,7 @@ This repository contains simple Arduino projects designed to help beginners lear
 4. Brief explanations of how each project works.
 
 📂 Project List
+
 Below are the projects available in this repository:
 
 1. Traffic Light Controller:
