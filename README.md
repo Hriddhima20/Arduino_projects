@@ -2,7 +2,8 @@
 This repository contains beginner-friendly Arduino projects, covering LED control, sensors, motors, and simple automation. 
 
 📌 About This Repository
-# This repository contains simple Arduino projects designed to help beginners learn the basics of electronics and programming. Each project includes:
+
+This repository contains simple Arduino projects designed to help beginners learn the basics of electronics and programming. Each project includes:
 1. Arduino code.
 2. Schematic diagrams.
 3. Images of the project interface.
