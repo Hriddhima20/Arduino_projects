@@ -11,6 +11,6 @@ The components required are:
 
 The working is:
 There is a moving obstacle;
-if speed of obstacle (0cm/s - 20cm/s) Red led blinks.
-if speed of obstacle (20cm/s - 50cm/s) Yellow led blinks.
-if speed of obstacle (>50cm/s) Green led blink + the Buzzer sounds.
+% if speed of obstacle (0cm/s - 20cm/s) Red led blinks.
+% if speed of obstacle (20cm/s - 50cm/s) Yellow led blinks.
+% if speed of obstacle (>50cm/s) Green led blink + the Buzzer sounds.
