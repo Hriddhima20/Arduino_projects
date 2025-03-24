@@ -1,0 +1,71 @@
+#define TRIG 9
+#define ECHO 10
+#define RED_LED 3
+#define YELLOW_LED 4
+#define GREEN_LED 5
+#define BUZZER 6
+
+float distance1, distance2, speed;
+long time1, time2;
+
+void setup() {
+    pinMode(TRIG, OUTPUT);
+    pinMode(ECHO, INPUT);
+    pinMode(RED_LED, OUTPUT);
+    pinMode(YELLOW_LED, OUTPUT);
+    pinMode(GREEN_LED, OUTPUT);
+    pinMode(BUZZER, OUTPUT);
+    Serial.begin(9600);
+}
+
+float getDistance() {
+    digitalWrite(TRIG, LOW);
+    delayMicroseconds(2);
+    digitalWrite(TRIG, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(TRIG, LOW);
+    float duration = pulseIn(ECHO, HIGH);
+    return (duration * 0.0343) / 2;  // -> cm
+}
+
+void loop() {
+    distance1 = getDistance();
+    time1 = millis();
+    
+    delay(100); 
+
+    distance2 = getDistance();
+    time2 = millis();
+    
+    float timeDiff = (time2 - time1) / 1000.0;  // ms -> seconds
+    speed = abs(distance2 - distance1) / timeDiff;  // S in cm/s
+
+    Serial.print("Speed: ");
+    Serial.print(speed);
+    Serial.println(" cm/s");
+
+    digitalWrite(RED_LED, LOW);
+    digitalWrite(YELLOW_LED, LOW);
+    digitalWrite(GREEN_LED, LOW);
+    digitalWrite(BUZZER, LOW);
+
+    if (speed >= 0 && speed <= 20) {
+        digitalWrite(RED_LED, HIGH);
+        delay(500);
+        digitalWrite(RED_LED, LOW);
+        delay(500);
+    } 
+    else if (speed > 20 && speed <= 50) {
+        digitalWrite(YELLOW_LED, HIGH);
+        delay(500);
+        digitalWrite(YELLOW_LED, LOW);
+        delay(500);
+    } 
+    else if (speed > 50) {
+        digitalWrite(GREEN_LED, HIGH);
+        digitalWrite(BUZZER, HIGH);
+        delay(500);
+        digitalWrite(BUZZER, LOW);
+        delay(500);
+    }
+}
