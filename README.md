@@ -10,3 +10,5 @@ This repository contains simple Arduino projects designed to help beginners lear
 4. Brief explanations of how each project works.
 
 Perfect for anyone exploring **IoT, Robotics, and Automation**
+
+**Feel free to contribute or suggest improvements** Happy tinkering!
